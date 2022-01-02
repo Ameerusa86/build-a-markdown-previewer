@@ -1,10 +1,17 @@
-export default function Editor() {
+export default function Editor({ markdown, onChange }) {
   return (
-    <div>
-      <div className="bg-teal-300 border-2 border-teal-900 rounded-lg text-6xl text-center">
+    <div className="border-2 border-teal-900 rounded-lg m-3">
+      <div className="bg-teal-700  text-6xl text-center text-white pb-2">
         Editor
       </div>
-      <textarea id="editor"></textarea>
+
+      <textarea
+        id="editor"
+        className="m-2 "
+        onChange={(event) => onChange(event.target.value)}
+      >
+        {markdown}
+      </textarea>
     </div>
   );
 }
