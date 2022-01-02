@@ -1,5 +1,13 @@
+import Editor from "./Components/Editor";
+import Preview from "./Components/Preview";
+
 function Main() {
-  return <div className="text-center text-8xl">Hello World</div>;
+  return (
+    <div className="container mx-auto">
+      <Editor />
+      <Preview />
+    </div>
+  );
 }
 
 export default Main;
